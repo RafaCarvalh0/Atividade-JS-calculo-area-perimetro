@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<script src='script.js'></script>
+
+<body>
+    <h1>Cálculo de área e de perímetro</h1>
+    <table>
+        <tr>
+            <td>Tipo de figura:</td>
+            <td>
+                <select id="tipoFigura" onchange="mudarCamposEntrada()">
+                    <option value="1">Triângulo</option>
+                    <option value="2">Retângulo</option>
+                    <option value="3">Círculo</option>
+                    <option value="4">Quadrado</option>
+                    <option value="5">Elipse</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <div id="tri" style="display:block">
+        <table>
+            <tr>
+                <td>Lado 1:</td>
+                <td><input type='text' value='' id='lbLado1'></td>
+            </tr>
+            <tr>
+                <td>Lado 2:</td>
+                <td><input type='text' value='' id='lbLado2'></td>
+            </tr>
+            <tr>
+                <td>Lado 3:</td>
+                <td><input type='text' id='lbLado3'></td>
+            </tr>
+        </table>
+    </div>
+    <div id="ret" style="display:none">
+        <table>
+            <tr>
+                <td>Base:</td>
+                <td><input type='text' value='' id='lbBase'></td>
+            </tr>
+            <tr>
+                <td>Altura:</td>
+                <td><input type='text' value='' id='lbAltura'></td>
+            </tr>
+        </table>
+    </div>
+    <div id="cir" style="display:none">
+        <table>
+            <tr>
+                <td>Raio:</td>
+                <td><input type='text' value='' id='lbRaio'></td>
+            </tr>
+        </table>
+    </div>
+    <div id="quad" style="display:none">
+        <table>
+            <tr>
+                <td>Lado:</td>
+                <td><input type='text' value='' id='lbLadoQuadrado'></td>
+            </tr>
+        </table>
+    </div>
+    <div id="eli" style="display:none">
+        <table>
+            <tr>
+                <td>Semimajor:</td>
+                <td><input type='text' value='' id='lbSemimajor'></td>
+            </tr>
+            <tr>
+                <td>Semiminor:</td>
+                <td><input type='text' value='' id='lbSemiminor'></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="result" style="display:block">
+        <table>
+            <tr>
+                <td>Perímetro:</td>
+                <td><input type='text' disabled id='perimetro'></td>
+            </tr>
+            <tr>
+                <td>Área:</td>
+                <td><input type='text' disabled id='area'></td>
+            </tr>
+        </table>
+    </div>
+    <input type='button' value='Calcular' onclick='eventoClickBotao()'>
+
+</body>
+
+</html>
